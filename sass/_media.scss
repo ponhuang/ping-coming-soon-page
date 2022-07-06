@@ -1,0 +1,41 @@
+/*---------- 600px ----------*/
+@media (max-width: 37.5em) {
+  header {
+    text-align: center;
+    .logo {
+      width: Min(100%, 6rem);
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    form {
+      .email__container {
+        flex-direction: column;
+        max-width: 30rem;
+
+        input {
+          width: 100%;
+          padding: 1.5rem 3rem;
+        }
+
+        .email {
+          max-width: 100%;
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+
+        .submit-btn {
+          width: 100%;
+          padding: 1.5rem 3rem;
+        }
+      }
+    }
+  }
+}

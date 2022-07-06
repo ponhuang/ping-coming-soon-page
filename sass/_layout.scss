@@ -1,0 +1,141 @@
+/*---------- HEADER ----------*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: Min(90%, 72rem);
+  margin-inline: auto;
+
+  .logo {
+    width: Min(100%, 9rem);
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    font-weight: $fw-light;
+    margin-bottom: 1.6rem;
+
+    span {
+      font-weight: $fw-bold;
+      color: $color-dark-gray;
+    }
+  }
+
+  p {
+    color: $color-dark-gray;
+  }
+
+  form {
+    .email__container {
+      display: flex;
+      height: 4rem;
+      align-items: center;
+      width: Min(100%, 64rem);
+      padding: 4rem 0 9.6rem 0;
+
+      input {
+        height: 100%;
+        outline: none;
+        border-radius: 100px;
+        border: none;
+        font-family: inherit;
+      }
+      .email {
+        width: 60%;
+        display: inline-block;
+        border: 1px solid $color-light-gray;
+        padding-left: 2rem;
+        margin-right: 1.6rem;
+        max-width: 42rem;
+
+        &::placeholder {
+          color: $color-light-gray;
+        }
+      }
+
+      .submit-btn {
+        width: 40%;
+        background-color: $color-primary;
+        color: #fff;
+        padding: 0 3.5rem;
+        font-weight: $fw-semi-bold;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 2px 4px 10px rgba(79, 125, 243, 0.4);
+
+        &:active {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  .img {
+    width: Min(80%, 64rem);
+    margin-bottom: 7.2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*---------- FOOTER ----------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  color: $color-light-gray;
+
+  .social__link {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .social-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid $color-light-gray;
+    border-radius: 100px;
+    padding: 0.7rem;
+    color: $color-primary;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: #fff;
+    }
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+    margin-bottom: -1rem;
+  }
+
+  .attribution {
+    font-size: 1.2rem;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: $color-primary;
+      font-weight: $fw-semi-bold;
+    }
+  }
+}

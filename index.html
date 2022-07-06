@@ -21,17 +21,65 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    We are launching soon! Subscribe and get notified Notify Me &copy; Copyright
-    Ping. All rights reserved.
+    <main>
+      <header>
+        <img src="images/logo.svg" alt="Ping's Logo" class="logo" />
+        <h1>We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+        <form id="form" action="#">
+          <div class="email__container">
+            <input
+              type="email"
+              id="email"
+              class="email"
+              placeholder="Your email address..."
+            />
+            <input type="submit" class="submit-btn" value="Notify Me" />
+          </div>
+        </form>
+        <div class="img">
+          <img
+            src="images/illustration-dashboard.png"
+            alt="dashboard illustration"
+          />
+        </div>
+      </header>
+    </main>
 
     <footer>
+      <ul class="social__link">
+        <li>
+          <a href="#"
+            ><ion-icon name="logo-facebook" class="social-icon"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="#"></a
+          ><ion-icon name="logo-twitter" class="social-icon"></ion-icon>
+        </li>
+        <li>
+          <a href="#"></a
+          ><ion-icon name="logo-instagram" class="social-icon"></ion-icon>
+        </li>
+      </ul>
+      <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by
+        <a href="https://github.com/ponhuang/ping-coming-soon-page">Pon Huang</a
+        >.
       </p>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
