@@ -21,6 +21,9 @@ body {
   align-items: center;
   justify-content: center; }
 
+main {
+  padding: 3rem; }
+
 /*---------- HEADER ----------*/
 header {
   display: flex;
@@ -138,6 +141,8 @@ footer {
 
 /*---------- 780px ----------*/
 @media (max-width: 48.75em) {
+  main {
+    padding: 2rem 0; }
   header {
     text-align: center; }
     header .logo {
