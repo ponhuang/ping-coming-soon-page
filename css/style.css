@@ -4,7 +4,8 @@
 *::after,
 *::before {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -26,7 +27,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: Min(90%, 72rem);
+  width: 100%;
   margin-inline: auto; }
   header .logo {
     width: Min(100%, 9rem);
@@ -38,43 +39,58 @@ header {
     header h1 span {
       font-weight: 700;
       color: #151f29; }
-  header p {
-    color: #151f29; }
-  header form .email__container {
+  header .header-text {
+    color: #151f29;
+    margin-bottom: 3rem; }
+  header form {
     display: flex;
-    height: 4rem;
-    align-items: center;
-    width: Min(100%, 64rem);
-    padding: 4rem 0 9.6rem 0; }
-    header form .email__container input {
-      height: 100%;
-      outline: none;
-      border-radius: 100px;
-      border: none;
-      font-family: inherit; }
-    header form .email__container .email {
-      width: 60%;
+    width: 80%;
+    align-items: flex-start; }
+    header form .email__container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 70%;
+      margin-inline: auto; }
+      header form .email__container input:invalid {
+        border-color: #ff5263; }
+      header form .email__container input:focus {
+        background-color: #fff; }
+      header form .email__container .email {
+        width: 100%;
+        display: inline-block;
+        border: 1px solid #cccccc;
+        border-radius: 100px;
+        padding: 1.5rem 4rem 1.5rem 2rem;
+        outline: none; }
+        header form .email__container .email::placeholder {
+          color: #cccccc; }
+      header form .email__container .error-message {
+        color: #ff5263;
+        font-size: 1.3rem;
+        top: 50%;
+        margin-top: 1rem;
+        margin-left: 2rem; }
+      header form .email__container .hidden {
+        display: none; }
+    header form .submit-btn {
       display: inline-block;
-      border: 1px solid #cccccc;
-      padding-left: 2rem;
-      margin-right: 1.6rem;
-      max-width: 42rem; }
-      header form .email__container .email::placeholder {
-        color: #cccccc; }
-    header form .email__container .submit-btn {
-      width: 40%;
+      width: 20%;
+      border: none;
+      border-radius: 100px;
       background-color: #4f7df3;
       color: #fff;
-      padding: 0 3.5rem;
+      padding: 1.5rem 3rem;
       font-weight: 600;
       text-align: center;
-      cursor: pointer;
-      box-shadow: 2px 4px 10px rgba(79, 125, 243, 0.4); }
-      header form .email__container .submit-btn:active {
+      box-shadow: 2px 4px 10px rgba(79, 125, 243, 0.4);
+      cursor: pointer; }
+      header form .submit-btn:hover, header form .submit-btn:active {
         background-color: #7096f5; }
   header .img {
     width: Min(80%, 64rem);
-    margin-bottom: 7.2rem; }
+    margin-bottom: 7.2rem;
+    margin-top: 9rem; }
     header .img img {
       width: 100%; }
 
@@ -83,6 +99,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2.2rem;
   color: #cccccc; }
   footer .social__link {
@@ -119,27 +136,33 @@ footer {
       color: #4f7df3;
       font-weight: 600; }
 
-/*---------- 600px ----------*/
-@media (max-width: 37.5em) {
+/*---------- 780px ----------*/
+@media (max-width: 48.75em) {
   header {
     text-align: center; }
     header .logo {
       width: Min(100%, 6rem);
       margin-bottom: 4rem; }
     header h1 {
-      font-size: 2.2rem; }
-    header p {
-      font-size: 1.2rem; }
-    header form .email__container {
+      font-size: 2.3rem; }
+    header .header-text {
+      font-size: 1.5rem; }
+    header form {
+      width: 90%;
       flex-direction: column;
-      max-width: 30rem; }
-      header form .email__container input {
-        width: 100%;
-        padding: 1.5rem 3rem; }
-      header form .email__container .email {
-        max-width: 100%;
-        margin-bottom: 1rem;
-        margin-right: 0; }
-      header form .email__container .submit-btn {
-        width: 100%;
-        padding: 1.5rem 3rem; } }
+      align-items: center; }
+      header form .email__container {
+        margin: 0; }
+        header form .email__container .email {
+          margin-right: 0; }
+        header form .email__container .error-message {
+          font-size: 1.1rem; }
+      header form .submit-btn {
+        width: 70%;
+        padding: 1.5rem 3rem;
+        margin-top: 2rem; }
+    header .img {
+      margin-bottom: 10rem;
+      margin-top: 4rem; }
+  footer .copyright {
+    text-align: center; } }

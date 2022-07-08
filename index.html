@@ -25,7 +25,7 @@
       <header>
         <img src="images/logo.svg" alt="Ping's Logo" class="logo" />
         <h1>We are launching <span>soon!</span></h1>
-        <p>Subscribe and get notified</p>
+        <p class="header-text">Subscribe and get notified</p>
         <form id="form" action="#">
           <div class="email__container">
             <input
@@ -34,8 +34,11 @@
               class="email"
               placeholder="Your email address..."
             />
-            <input type="submit" class="submit-btn" value="Notify Me" />
+            <p class="error-message hidden">
+              Please provide a valid email address
+            </p>
           </div>
+          <button type="submit" class="submit-btn">Notify Me</button>
         </form>
         <div class="img">
           <img

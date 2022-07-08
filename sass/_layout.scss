@@ -4,7 +4,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: Min(90%, 72rem);
+  width: 100%;
   margin-inline: auto;
 
   .logo {
@@ -23,51 +23,76 @@ header {
     }
   }
 
-  p {
+  .header-text {
     color: $color-dark-gray;
+    margin-bottom: 3rem;
   }
 
   form {
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+
     .email__container {
       display: flex;
-      height: 4rem;
-      align-items: center;
-      width: Min(100%, 64rem);
-      padding: 4rem 0 9.6rem 0;
+      flex-direction: column;
+      align-items: start;
+
+      width: 70%;
+      margin-inline: auto;
 
       input {
-        height: 100%;
-        outline: none;
-        border-radius: 100px;
-        border: none;
-        font-family: inherit;
+        &:invalid {
+          border-color: $color-tertiary;
+        }
+
+        &:focus {
+          background-color: #fff;
+        }
       }
+
       .email {
-        width: 60%;
+        width: 100%;
         display: inline-block;
         border: 1px solid $color-light-gray;
-        padding-left: 2rem;
-        margin-right: 1.6rem;
-        max-width: 42rem;
+        border-radius: 100px;
+        padding: 1.5rem 4rem 1.5rem 2rem;
+        outline: none;
 
         &::placeholder {
           color: $color-light-gray;
         }
       }
 
-      .submit-btn {
-        width: 40%;
-        background-color: $color-primary;
-        color: #fff;
-        padding: 0 3.5rem;
-        font-weight: $fw-semi-bold;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 2px 4px 10px rgba(79, 125, 243, 0.4);
+      .error-message {
+        color: $color-tertiary;
+        font-size: 1.3rem;
+        top: 50%;
+        margin-top: 1rem;
+        margin-left: 2rem;
+      }
 
-        &:active {
-          background-color: $color-secondary;
-        }
+      .hidden {
+        display: none;
+      }
+    }
+
+    .submit-btn {
+      display: inline-block;
+      width: 20%;
+      border: none;
+      border-radius: 100px;
+      background-color: $color-primary;
+      color: #fff;
+      padding: 1.5rem 3rem;
+      font-weight: $fw-semi-bold;
+      text-align: center;
+      box-shadow: 2px 4px 10px rgba(79, 125, 243, 0.4);
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $color-secondary;
       }
     }
   }
@@ -75,6 +100,7 @@ header {
   .img {
     width: Min(80%, 64rem);
     margin-bottom: 7.2rem;
+    margin-top: 9rem;
 
     img {
       width: 100%;
@@ -87,6 +113,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2.2rem;
   color: $color-light-gray;
 
