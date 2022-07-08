@@ -24,6 +24,7 @@ form.addEventListener("submit", (e) => {
       "Whoops! It looks like you forgot to add your email";
   } else if (!email.value.match(regexEmail)) {
     errorMessage.classList.remove("hidden");
+    email.style.borderColor = "hsl(354, 100%, 66%)";
     errorMessage.innerText = "Please provide a valid email address";
   } else {
     errorMessage.classList.add("hidden");

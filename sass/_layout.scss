@@ -30,16 +30,15 @@ header {
 
   form {
     display: flex;
-    width: 80%;
+    width: 63rem;
     align-items: flex-start;
 
     .email__container {
       display: flex;
       flex-direction: column;
       align-items: start;
-
-      width: 70%;
-      margin-inline: auto;
+      width: 100%;
+      margin-right: 2rem;
 
       input {
         &:invalid {
@@ -79,7 +78,7 @@ header {
 
     .submit-btn {
       display: inline-block;
-      width: 20%;
+      width: 20rem;
       border: none;
       border-radius: 100px;
       background-color: $color-primary;
